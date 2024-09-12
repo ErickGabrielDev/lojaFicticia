@@ -1,0 +1,586 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f8f8f8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px 40px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    height: 70px;
+    cursor: pointer;
+}
+
+nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    margin-left: 600px;
+}
+
+nav .menu_lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav .menu_lista li {
+    position: relative;
+}
+
+nav .menu_lista li a {
+    color: #333;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    position: relative;
+}
+
+nav .menu_lista li a::after {
+    content: "";
+    position: absolute;
+    background-color: #414040;
+    height: 1.5px;
+    width: 0;
+    left: 0;
+    bottom: -1px;
+    transition: width 0.3s ease-in-out;
+}
+
+nav .menu_lista li a:hover::after {
+    width: 90%;
+}
+
+main .texto_principal {
+    margin-top: 100px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+figure .banner_inicio {
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.banner_inicio {
+    max-width: 100%;
+    height: auto;
+}
+
+.titulo_bem-vindo {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    background: linear-gradient(to right, #000000, #bdbcbc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.subtitulo_bem-vindo {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    font-size: 30px;
+    color: rgb(68, 68, 68);
+}
+
+.paragrafo_bem-vindo {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    background: linear-gradient(to right, #000000, #656565);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.titulo_item_inicio {
+    margin-top: 100px;
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    background: linear-gradient(to right, #000000, #656565);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.titulo_setor_masculino {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.masculino {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+    cursor: pointer;
+    margin-bottom: 90px;
+}
+
+
+
+.roupas_masculina {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 80px;
+    justify-content: center;
+}
+
+.roupa_masculina_01,
+.roupa_masculina_02,
+.roupa_masculina_03 {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.roupa_masculina_01:hover,
+.roupa_masculina_02:hover,
+.roupa_masculina_03:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+figure {
+    margin: 0;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.descricao_masculino_01,
+.descricao_masculino_02,
+.descricao_masculino_03 {
+    padding: 15px;
+    background-color: #f1f1f1;
+}
+
+.descricao_masculino_01 p,
+.descricao_masculino_02 p,
+.descricao_masculino_03 p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+    text-decoration: underline;
+}
+
+.preco_masculino_01,
+.preco_masculino_02,
+.preco_masculino_03 {
+    padding: 10px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+}
+
+.preco_masculino_01 p,
+.preco_masculino_02 p,
+.preco_masculino_03 p {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #e94e77;
+}
+
+
+.titulo_setor_feminino {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 28px;
+    color: #333;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.feminino {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+    margin-bottom: 100px;
+    cursor: pointer;
+}
+
+.titulo_secao {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.roupas_feminina {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 80px;
+    justify-content: center;
+}
+
+.roupa_feminina_01,
+.roupa_feminina_02,
+.roupa_feminina_03 {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.roupa_feminina_01:hover,
+.roupa_feminina_02:hover,
+.roupa_feminina_03:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+figure {
+    margin: 0;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.descricao_feminino_01,
+.descricao_feminino_02,
+.descricao_feminino_03 {
+    padding: 15px;
+    background-color: #f1f1f1;
+}
+
+.descricao_feminino_01 p,
+.descricao_feminino_02 p,
+.descricao_feminino_03 p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+    text-decoration: underline;
+
+}
+
+.preco_feminino_01,
+.preco_feminino_02,
+.preco_feminino_03 {
+    padding: 10px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+}
+
+.preco_feminino_01 p,
+.preco_feminino_02 p,
+.preco_feminino_03 p {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #e94e77;
+}
+
+.titulo_setor_infantil {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 28px;
+    color: #333;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.infantil {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+    cursor: pointer;
+    margin-bottom: 90px;
+}
+
+.roupas_infantil {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 80px;
+    justify-content: center;
+}
+
+.roupa_infantil_01,
+.roupa_infantil_02,
+.roupa_infantil_03 {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.roupa_infantil_01:hover,
+.roupa_infantil_02:hover,
+.roupa_infantil_03:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.descricao_infantil_01,
+.descricao_infantil_02,
+.descricao_infantil_03 {
+    padding: 15px;
+    background-color: #f1f1f1;
+}
+
+.descricao_infantil_01 p,
+.descricao_infantil_02 p,
+.descricao_infantil_03 p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+    text-decoration: underline;
+}
+
+.preco_infantil_01,
+.preco_infantil_02,
+.preco_infantil_03 {
+    padding: 10px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+}
+
+.preco_infantil_01 p,
+.preco_infantil_02 p,
+.preco_infantil_03 p {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #e94e77;
+}
+
+
+.titulo_setor_inverno {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 28px;
+    color: #333;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.inverno {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+    cursor: pointer;
+    margin-bottom: 90px;
+}
+
+.roupas_inverno {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 80px;
+    justify-content: center;
+}
+
+.roupa_inverno_01,
+.roupa_inverno_02,
+.roupa_inverno_03 {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.roupa_inverno_01:hover,
+.roupa_inverno_02:hover,
+.roupa_inverno_03:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.descricao_inverno_01,
+.descricao_inverno_02,
+.descricao_inverno_03 {
+    padding: 15px;
+    background-color: #f1f1f1;
+}
+
+.descricao_inverno_01 p,
+.descricao_inverno_02 p,
+.descricao_inverno_03 p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+    text-decoration: underline;
+}
+
+.preco_inverno_01,
+.preco_inverno_02,
+.preco_inverno_03 {
+    padding: 10px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+}
+
+.preco_inverno_01 p,
+.preco_inverno_02 p,
+.preco_inverno_03 p {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #e94e77;
+}
+
+.titulo_setor_verao {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 28px;
+    color: #333;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.verao {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+    cursor: pointer;
+    margin-bottom: 90px;
+}
+
+.roupas_verao {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 80px;
+    justify-content: center;
+}
+
+.roupa_verao_01,
+.roupa_verao_02,
+.roupa_verao_03 {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.roupa_verao_01:hover,
+.roupa_verao_02:hover,
+.roupa_verao_03:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.descricao_verao_01,
+.descricao_verao_02,
+.descricao_verao_03 {
+    padding: 15px;
+    background-color: #f1f1f1;
+}
+
+.descricao_verao_01 p,
+.descricao_verao_02 p,
+.descricao_verao_03 p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+    text-decoration: underline;
+}
+
+.preco_verao_01,
+.preco_verao_02,
+.preco_verao_03 {
+    padding: 10px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+}
+
+.preco_verao_01 p,
+.preco_verao_02 p,
+.preco_verao_03 p {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #e94e77;
+}
+
+
+
+footer {
+    background: linear-gradient(to right, #000000, #bdbcbc);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-links li {
+    margin: 0 15px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+}
